@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ProjectManagment" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="ProjectManagment" prefix_auto="1" extension_auto="1" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+			</Target>
+		</Build>
+		<Linker>
+			<Add option="sqlite3.dll" />
+		</Linker>
+		<Unit filename="main.cpp" />
+		<Unit filename="src/Account/account.cpp" />
+		<Unit filename="src/Account/account.h" />
+		<Unit filename="src/Constants/Enum/Host.h" />
+		<Unit filename="src/Constants/Enum/OS.h" />
+		<Unit filename="src/Constants/Keyboard/define.h" />
+		<Unit filename="src/Constants/Language/Initialize.h" />
+		<Unit filename="src/Constants/Structre/timeStructre.cpp" />
+		<Unit filename="src/Database/DatabaseSql.cpp" />
+		<Unit filename="src/Database/DatabaseSql.h" />
+		<Unit filename="src/Keyboard/keyboard.cpp" />
+		<Unit filename="src/Keyboard/keyboard.h" />
+		<Unit filename="src/Language/English.cpp" />
+		<Unit filename="src/Language/ILanguage.cpp" />
+		<Unit filename="src/Language/Japan.cpp" />
+		<Unit filename="src/Language/Turkish.cpp" />
+		<Unit filename="src/Model/Price/priceCalculator.cpp" />
+		<Unit filename="src/Model/Price/priceCalculator.h" />
+		<Unit filename="src/Model/Time/timeController.cpp" />
+		<Unit filename="src/Model/Time/timeController.h" />
+		<Unit filename="src/Page/Language/languagePage.cpp" />
+		<Unit filename="src/Page/Project/project.cpp" />
+		<Unit filename="src/Page/Project/project.h" />
+		<Unit filename="src/Utils/String/helperString.cpp" />
+		<Unit filename="src/Utils/String/helperString.h" />
+		<Unit filename="src/Utils/Time/helperTime.cpp" />
+		<Unit filename="src/Utils/Time/helperTime.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

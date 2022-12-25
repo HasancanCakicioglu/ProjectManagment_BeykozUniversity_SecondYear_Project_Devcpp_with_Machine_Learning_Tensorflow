@@ -1,0 +1,82 @@
+# Project: ProjectManagment
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o src/Constants/Structre/timeStructre.o src/Utils/Time/helperTime.o src/Utils/String/helperString.o src/Account/account.o src/Database/DatabaseSql.o src/Language/ILanguage.o src/Language/Turkish.o src/Language/English.o src/Model/Price/priceCalculator.o src/Model/Time/timeController.o src/Keyboard/keyboard.o src/Page/Language/languagePage.o src/Page/Project/project.o AI/model/AI.o AI/csv/projectManagmentCSV.o AI/tensorflow/projectManagmentRegressionModel.o src/Language/Italy.o src/Utils/UI/UIhelper.o
+LINKOBJ  = main.o src/Constants/Structre/timeStructre.o src/Utils/Time/helperTime.o src/Utils/String/helperString.o src/Account/account.o src/Database/DatabaseSql.o src/Language/ILanguage.o src/Language/Turkish.o src/Language/English.o src/Model/Price/priceCalculator.o src/Model/Time/timeController.o src/Keyboard/keyboard.o src/Page/Language/languagePage.o src/Page/Project/project.o AI/model/AI.o AI/csv/projectManagmentCSV.o AI/tensorflow/projectManagmentRegressionModel.o src/Language/Italy.o src/Utils/UI/UIhelper.o
+LIBS     = -L"D:/Dev-Cpp/TDM-GCC-64/lib" -L"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc sqlite3.dll
+INCS     = -I"D:/Dev-Cpp/TDM-GCC-64/include" -I"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"D:/Dev-Cpp/TDM-GCC-64/include" -I"D:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = ProjectManagment.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+DEL      = D:\Dev-Cpp\DevCpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+src/Constants/Structre/timeStructre.o: src/Constants/Structre/timeStructre.cpp
+	$(CPP) -c src/Constants/Structre/timeStructre.cpp -o src/Constants/Structre/timeStructre.o $(CXXFLAGS)
+
+src/Utils/Time/helperTime.o: src/Utils/Time/helperTime.cpp
+	$(CPP) -c src/Utils/Time/helperTime.cpp -o src/Utils/Time/helperTime.o $(CXXFLAGS)
+
+src/Utils/String/helperString.o: src/Utils/String/helperString.cpp
+	$(CPP) -c src/Utils/String/helperString.cpp -o src/Utils/String/helperString.o $(CXXFLAGS)
+
+src/Account/account.o: src/Account/account.cpp
+	$(CPP) -c src/Account/account.cpp -o src/Account/account.o $(CXXFLAGS)
+
+src/Database/DatabaseSql.o: src/Database/DatabaseSql.cpp
+	$(CPP) -c src/Database/DatabaseSql.cpp -o src/Database/DatabaseSql.o $(CXXFLAGS)
+
+src/Language/ILanguage.o: src/Language/ILanguage.cpp
+	$(CPP) -c src/Language/ILanguage.cpp -o src/Language/ILanguage.o $(CXXFLAGS)
+
+src/Language/Turkish.o: src/Language/Turkish.cpp
+	$(CPP) -c src/Language/Turkish.cpp -o src/Language/Turkish.o $(CXXFLAGS)
+
+src/Language/English.o: src/Language/English.cpp
+	$(CPP) -c src/Language/English.cpp -o src/Language/English.o $(CXXFLAGS)
+
+src/Model/Price/priceCalculator.o: src/Model/Price/priceCalculator.cpp
+	$(CPP) -c src/Model/Price/priceCalculator.cpp -o src/Model/Price/priceCalculator.o $(CXXFLAGS)
+
+src/Model/Time/timeController.o: src/Model/Time/timeController.cpp
+	$(CPP) -c src/Model/Time/timeController.cpp -o src/Model/Time/timeController.o $(CXXFLAGS)
+
+src/Keyboard/keyboard.o: src/Keyboard/keyboard.cpp
+	$(CPP) -c src/Keyboard/keyboard.cpp -o src/Keyboard/keyboard.o $(CXXFLAGS)
+
+src/Page/Language/languagePage.o: src/Page/Language/languagePage.cpp
+	$(CPP) -c src/Page/Language/languagePage.cpp -o src/Page/Language/languagePage.o $(CXXFLAGS)
+
+src/Page/Project/project.o: src/Page/Project/project.cpp
+	$(CPP) -c src/Page/Project/project.cpp -o src/Page/Project/project.o $(CXXFLAGS)
+
+AI/model/AI.o: AI/model/AI.cpp
+	$(CPP) -c AI/model/AI.cpp -o AI/model/AI.o $(CXXFLAGS)
+
+AI/csv/projectManagmentCSV.o: AI/csv/projectManagmentCSV.cpp
+	$(CPP) -c AI/csv/projectManagmentCSV.cpp -o AI/csv/projectManagmentCSV.o $(CXXFLAGS)
+
+AI/tensorflow/projectManagmentRegressionModel.o: AI/tensorflow/projectManagmentRegressionModel.cpp
+	$(CPP) -c AI/tensorflow/projectManagmentRegressionModel.cpp -o AI/tensorflow/projectManagmentRegressionModel.o $(CXXFLAGS)
+
+src/Language/Italy.o: src/Language/Italy.cpp
+	$(CPP) -c src/Language/Italy.cpp -o src/Language/Italy.o $(CXXFLAGS)
+
+src/Utils/UI/UIhelper.o: src/Utils/UI/UIhelper.cpp
+	$(CPP) -c src/Utils/UI/UIhelper.cpp -o src/Utils/UI/UIhelper.o $(CXXFLAGS)
